@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    @import url('/static/css/registration.css')
+</style>
+<img src="/static/image/phone.png" class="phone">
+<div class="error">{{ response }}</div>
+<div class="card">
+    <div class="card-body">
+        <h4>Регистрация</h4>
+        <div class="cardd">
+            <div class="card-body">
+                <form action="" method="post" novalidate>
+                    {{ form.csrf_token }}
+                    <p>{{ form.address.label() }}<br>
+                        {{ form.address }}
+                    </p>
+                    <p>{{ form.submit }}</p>
+                    <p>{{ form.entrance }}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
